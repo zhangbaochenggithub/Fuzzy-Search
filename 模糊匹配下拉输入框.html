@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>模糊匹配下拉输入框</title>
+</head>
+<script src="jquery-1.11.1.min.js"></script>
+<script src="模糊匹配下拉输入框.js"></script>
+<style>
+/*修改滚动条样式*/
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  /**/
+}
+*::-webkit-scrollbar-button {
+  display: none;
+  /**/
+}
+*::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #bfbfbf;
+  border-radius: 10px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+*::-webkit-scrollbar-corner {
+  background: #179a16;
+}
+* {
+  border: medium none;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}	
+*{padding:0;margin:0;}
+	body{padding:20px;}
+	.input-box,.input-box2{
+		display: inline-block;
+	}
+	.wx-input{
+		width: 180px;
+		height: 30px;
+		position: relative;
+		padding-left: 2px;
+		border-radius: 3px;
+		border: 1px solid #ccc;
+	}
+	input::-ms-clear{display:none;}
+</style>
+<body>
+	<div class="input-box input-Selector">
+		<input type="text" class="wx-input">
+	</div>
+</body>
+<script>
+	$(function(){
+		$(".input-box").wxSelect({
+			data:[{"name":"admin","value":21},{"name":"animation","value":11},{"name":"available","value":13},{"name":"bady","value":23},{"name":"coun","value":23},{"name":"张三","value":23},{"name":"周琪","value":19},{"name":"赵六","value":26},{"name":"王五","value":22},{"name":"李四","value":25},{"name":"张麻子","value":25}]
+		});
+	})
+</script>
